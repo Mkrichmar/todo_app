@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-container {
+  @apply flex flex-col justify-center mx-auto px-4 py-6 md:px-8 md:py-10 max-w-screen-sm ;
+}
+
+.my-global-button {
+  display: inline-flex; /* Make the element an inline-level flex container */
+  align-items: center;  /* Vertically center items */
+  justify-content: center; /* Center items horizontally */
+  gap: 0.5rem;          /* Similar to space-x-2; controls horizontal spacing */
+  /* Match the width of your task items
+     If your task items are using Tailwind classes like w-48 (12rem),
+     you can set a fixed width here. Adjust as necessary. */
+  
+  width: 40rem; /* equivalent to w-48 in Tailwind, adjust as needed */
+
+  /* Modern light blue background (Tailwind’s blue-500 or slightly lighter)
+     Adjust the color to your preference */
+  background-color: #3b82f6;
+  
+  /* White text to contrast with the blue background */
+  color: #fff;
+  
+  /* Styling to make it look more like a button and stand out */
+  padding: 0.5rem 1rem; /* vertical and horizontal padding */
+  border-radius: 0.375rem; /* Tailwind’s rounded-md */
+  text-align: center;
+  text-decoration: none;
+  
+  /* Cool modern font similar to Facebook’s logo font */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+
+  /* Smooth transitions for hover states */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.my-global-button:hover {
+  /* Slightly darker blue on hover for a modern feel */
+  background-color: #2563eb; /* Tailwind’s blue-600 */
+  transform: translateY(-2px);
+}
+
+.my-global-button:active {
+  /* Add a small "press" effect */
+  transform: translateY(0);
+}
+
+.my-global-task {
+  display: inline-flex; /* Make the element an inline-level flex container */
+  align-items: center;  /* Vertically center items */
+  justify-content: center; /* Center items horizontally */
+  gap: 0.7rem;          /* Similar to space-x-2; controls horizontal spacing */
+  /* Match the width of your task items
+     If your task items are using Tailwind classes like w-48 (12rem),
+     you can set a fixed width here. Adjust as necessary. */
+  
+  width: 40rem; /* equivalent to w-48 in Tailwind, adjust as needed */
+
+  /* Modern light blue background (Tailwind’s blue-500 or slightly lighter)
+     Adjust the color to your preference */
+  background-color: #5a5c5f;
+  
+  /* White text to contrast with the gray background */
+  color: #fff;
+  
+  /* Styling to make it look more like a button and stand out */
+  padding: 0.5rem 1rem; /* vertical and horizontal padding */
+  border-radius: 0.375rem; /* Tailwind’s rounded-md */
+  text-align: center;
+  text-decoration: none;
+  
+  /* Cool modern font similar to Facebook’s logo font */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+
+  /* Smooth transitions for hover states */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.my-global-task:hover {
+  /* Slightly darker blue on hover for a modern feel */
+  background-color: #999da4; /*  */
+  transform: translateY(-2px);
+}
+
+.my-global-task:active {
+  /* Add a small "press" effect */
+  transform: translateY(0);
+}
